@@ -18,7 +18,7 @@ $setting = \App\Models\Setting::find(1);
 <!--/.sidebar-area-->
 
 <div id="preloader">
-    <div class="loading" data-loading-text="Bizan"></div>
+    <div class="loading" data-loading-text="Palpressmedia"></div>
 </div>
 <!-- ./ preloader -->
 
