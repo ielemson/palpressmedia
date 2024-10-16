@@ -1,13 +1,11 @@
+@php
+$setting = \App\Models\Setting::find(1);
+@endphp
 <header class="header header-3 header-4 sticky-active">
     <div class="top-bar bar-2">
         <div class="container">
             <div class="top-bar-inner">
-                <div class="top-bar-left">
-                    <span>Now Hiring: Are you looking for best consultancy service?</span>
-                </div>
-                <div class="top-bar-left">
-                    <span><i class="fa-sharp fa-regular fa-clock"></i>Office Hours: 08:00am-6:00pm</span>
-                </div>
+              
             </div>
         </div>
     </div>
@@ -16,7 +14,7 @@
             <div class="primary-header-inner">
                 <div class="header-logo">
                     <a href="{{ url("/") }}">
-                        <img src="assets/img/logo/logo-2.png" alt="logo">
+                        <img src="{{ asset("images/settings/$setting->website_logo_light") }}" alt="logo" style="width:50%">
                     </a>
                 </div>
                 <div class="inner-left">
@@ -36,7 +34,7 @@
                                    
                                 </li>
                                 <li class="">
-                                    <a href="{{ route("blogs") }}">Blog</a>
+                                    <a href="{{ route("ourblogs") }}">Blog</a>
                                   
                                 </li>
                                 <li><a href="{{ route("contact") }}">Contact</a></li>

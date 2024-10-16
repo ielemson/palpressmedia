@@ -74,15 +74,15 @@ Website Settings
 												@enderror
 											</div>
 
-											<div class="form-group">
+											{{-- <div class="form-group">
 												<label for="website_title" class="required">{{__('Training Title')}}:</label>
 												<input type="text" name="training_title" id="training_title" class="form-control @error('training_title') form-control-error @enderror" required="required" value="{{$setting->training_title}}">
 				
-												@error('training_title')
+												@error('website_title')
 													<span class="text-danger">{{ $message }}</span>
 												@enderror
-											</div>
-				
+											</div> --}}
+{{-- 				
 											<div class="form-group">
 												<label for="training_cost" class="required">{{__('Training Cost')}}:</label>
 												<input type="number" name="training_cost" id="training_cost" class="form-control @error('training_cost') form-control-error @enderror" required="required" value="{{$setting->training_cost}}">
@@ -99,14 +99,13 @@ Website Settings
 													<span class="text-danger">{{ $message }}</span>
 												@enderror
 											</div>
-				
+				 --}}
 											<div class="row">
-												
 												<div class="col-md-6">
 													<div class="card">
 														<div class="card-body text-center">
 															<div class="form-group">
-																<label for="website_title" class="required">{{__('Website Logo')}}:</label>
+																<label for="website_title" class="required">{{__('Website Logo Dark')}}:</label>
 																<div class="">
 																	@if(!empty($setting->website_logo_dark))
 																		<img src="{{ asset("images/settings/$setting->website_logo_dark") }}" alt="..." id="website_logo_dark_output" class="img-thumbnail rounded mb-3"  >
@@ -115,6 +114,25 @@ Website Settings
 																	@endif
 				
 																	<input type="file" class="form-control" name="website_logo_dark">
+																	
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="card">
+														<div class="card-body text-center">
+															<div class="form-group">
+																<label for="website_title" class="required">{{__('Website Logo Light')}}:</label>
+																<div class="">
+																	@if(!empty($setting->website_logo_light))
+																		<img src="{{ asset("images/settings/$setting->website_logo_light") }}" alt="..." id="website_logo_dark_output" class="img-thumbnail rounded mb-3"  >
+																	@else
+																		<img src="" alt="..." id="website_logo_dark_output" class="img-thumbnail rounded mb-3" >
+																	@endif
+				
+																	<input type="file" class="form-control" name="website_logo_light">
 																	
 																</div>
 															</div>

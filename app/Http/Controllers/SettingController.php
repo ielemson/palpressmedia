@@ -33,10 +33,10 @@ class SettingController extends Controller
 	{
 		$rules = [
             'website_title' 			=> 'nullable|string',
-            'website_logo_dark'         => 'nullable',
-            'training_cost'             => 'required|numeric',
-             'about'                      => 'nullable|string',
-            // 'website_logo_small'        => 'nullable|string',
+            'website_logo_dark'         => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'training_cost'             => 'nullable|numeric',
+             'about'                    => 'nullable|string',
+            'website_logo_light'        => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'website_favicon'           => 'nullable|string',
             'meta_title'                => 'nullable|string',
             'meta_description'          => 'nullable|string',
@@ -63,6 +63,15 @@ class SettingController extends Controller
             $request->website_logo_dark->move(public_path('images/settings'), $newImageName);
 
             $input['website_logo_dark']  = $newImageName;
+            // dd($input);
+        }
+        if (!empty($input['website_logo_light'])) {
+
+            $newImageName = uniqid() . '-' .'logo'. '.' . $request->website_logo_light->extension();
+
+            $request->website_logo_light->move(public_path('images/settings'), $newImageName);
+
+            $input['website_logo_light']  = $newImageName;
             // dd($input);
         }
 

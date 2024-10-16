@@ -8,10 +8,10 @@ $setting = \App\Models\Setting::find(1);
         <div class="container">
             <div class="top-bar-inner">
                 <div class="top-bar-left">
-                    <span>Now Hiring: Are you looking for best consultancy service?</span>
+                    {{-- <span>Now Hiring: Are you looking for best consultancy service?</span> --}}
                 </div>
                 <div class="top-bar-left">
-                    <span><i class="fa-sharp fa-regular fa-clock"></i>Office Hours: 08:00am-6:00pm</span>
+                    {{-- <span><i class="fa-sharp fa-regular fa-clock"></i>Office Hours: 08:00am-6:00pm</span> --}}
                 </div>
             </div>
         </div>
@@ -21,8 +21,8 @@ $setting = \App\Models\Setting::find(1);
             <div class="middle-header-inner">
                 <div class="header-logo">
                     <div class="shape"></div>
-                    <a href="index.html">
-                        <img src="assets/img/logo/logo-1.png" alt="logo">
+                    <a href="{{ route("welcome") }}">
+                        <img src="{{ asset("images/settings/$setting->website_logo_dark") }}" alt="logo" style="width:50%;">
                     </a>
                 </div>
                 <div class="header-items-wrap">
@@ -55,8 +55,8 @@ $setting = \App\Models\Setting::find(1);
         <div class="container">
             <div class="primary-header-inner">
                 <div class="header-logo d-lg-none">
-                    <a href="index.html">
-                        <img src="assets/img/logo/logo-2.png" alt="logo">
+                    <a href="{{ route("welcome") }}">
+                        <img src="{{ asset("images/settings/$setting->website_logo_light") }}" alt="logo">
                     </a>
                 </div>
                 <div class="header-menu-wrap">
@@ -75,7 +75,7 @@ $setting = \App\Models\Setting::find(1);
                                
                             </li>
                             <li class="">
-                                <a href="{{ route("blogs") }}">Blog</a>
+                                <a href="{{ route("ourblogs") }}">Blog</a>
                               
                             </li>
                             <li><a href="{{ route("contact") }}">Contact</a></li>

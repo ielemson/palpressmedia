@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\TeamMemberController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,15 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+Route::get('/', [App\Http\Controllers\GeneralController::class, 'index'])->name('welcome');
 Route::get('/about-us', [App\Http\Controllers\GeneralController::class, 'about'])->name('about');
 Route::get('/contact-us', [App\Http\Controllers\GeneralController::class, 'contact'])->name('contact');
 Route::get('/our-services', [App\Http\Controllers\GeneralController::class, 'services'])->name('services');
 Route::get('/our-services/{slug}', [App\Http\Controllers\GeneralController::class, 'ourservice'])->name('ourservice');
-Route::get('/blogs', [App\Http\Controllers\GeneralController::class, 'blogs'])->name('blogs');
+Route::get('/our-blogs', [App\Http\Controllers\GeneralController::class, 'ourblogs'])->name('ourblogs');
+Route::get('/blog/{slug}', [App\Http\Controllers\GeneralController::class, 'blog_details'])->name("blog_details");
+Route::post('contact', [App\Http\Controllers\GeneralController::class, 'contactSubmit'])->name("contact.submit");
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -30,7 +34,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('user', 'UserController');
 
     Route::resource('permission', 'PermissionController');
-
 
     Route::get('/profile', 'UserController@profile')->name('user.profile');
 
@@ -50,6 +53,8 @@ Route::group(['middleware' => 'auth'], function() {
     // Route::resource('services', ServicesController::class);
     // Route::resources('services', [App\Http\Controllers\ServicesController::class]);
     Route::resource('services', 'ServicesController');
+    Route::resource('team', 'TeamMemberController');
+    Route::resource('blogs', "BlogController");
 });
 
 

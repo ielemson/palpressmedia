@@ -47,7 +47,7 @@ START: Template Default CSS
   --bz-color-common-dark: #232323;
   --bz-color-heading-primary: #191F29;
   --bz-color-text-body: #74787C;
-  --bz-color-theme-primary: #1E6EE7;
+  --bz-color-theme-primary: #0000FE;
   --bz-color-theme-secondary: #191F29;
   --bz-color-theme-red: #EC281C;
   --bz-color-bg-1: #191F30;
@@ -2638,7 +2638,7 @@ START: Header CSS
   }
 }
 .header .middle-header .middle-header-inner .header-logo {
-  padding: 33px 150px 32px 0;
+  /* padding: 33px 150px 32px 0; */
   position: relative;
   z-index: 1;
 }
@@ -4464,7 +4464,7 @@ START: Header CSS
   position: relative;
   z-index: 1;
   overflow: hidden;
-  padding-bottom: 360px;
+  /* padding-bottom: 360px; */
 }
 @media only screen and (max-width: 992px) {
   .about-section-4 {
@@ -4594,7 +4594,7 @@ START: Header CSS
   object-fit: cover;
 }
 .about-img-wrap-4 .about-img.img-1 {
-  max-width: 285px;
+  /* max-width: 285px; */
   width: 100%;
   top: 0;
   left: 0;
@@ -5337,7 +5337,7 @@ START: Header CSS
 .team-item .team-thumb {
   max-width: 500px;
   width: 100%;
-  height: 452px;
+  height: 352px;
   position: relative;
   z-index: 1;
 }
@@ -6078,7 +6078,7 @@ START: Header CSS
   transition: all 0.3s ease-in-out;
 }
 .project-item .project-img .overlay-2 {
-  background: #1E6EE7;
+  background: #0000FE;
   mix-blend-mode: multiply;
   opacity: 0.67;
   width: 100%;
@@ -7310,7 +7310,7 @@ START: Contact CSS
   height: 100%;
 }
 .request-section-2 .request-bg-img:before {
-  background: #1E6EE7;
+  background: #0000FE;
   content: "";
   mix-blend-mode: multiply;
   width: 100%;

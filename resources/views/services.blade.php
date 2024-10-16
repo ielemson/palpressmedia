@@ -1,5 +1,7 @@
 @extends("layouts.app")
-
+@php
+$setting = \App\Models\Setting::find(1);
+@endphp
 @section("content")
     @include("partials.page-header")
     @include("partials.page-hero",["title"=>"Our Services"])
@@ -8,10 +10,10 @@
         <div class="container">
             <div class="row gy-4 fade-wrapper">
                 @if($services->isEmpty())
-            <div class="alert alert-info">No services found. Create a new one!</div>
+            <div class="alert alert-info">No services found</div>
         @else
-            <div class="row">
-                @foreach ($services as $service)
+          
+                {{-- @foreach ($services as $service)
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item-4 fade-top">
                         <div class="service-thumb">
@@ -24,8 +26,24 @@
                         </div>
                     </div>
                 </div> 
-                @endforeach
-            </div>
+                @endforeach --}}
+
+                <div class="row fade-wrapper gy-lg-0 gy-4 justify-content-center">
+                    @foreach ($services as $service)
+                         <div class="col-lg-4 col-md-6 fade-top">
+                        <div class="service-item">
+                            <div class="icon"><img src="{{ asset($service->image) }}" alt="icon"></div>
+                            <div class="service-content">
+                                <h3 class="title"><a href="{{ route("ourservice",$service->slug) }}">{{ $service->title }}</a></h3>
+                                <p>{{ \Illuminate\Support\Str::limit($service->content, 100, '...') }}</p>
+                                <a href="{{ route("ourservice",$service->slug) }}" class="bz-primary-btn">Read More <i class="fa-regular fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+            
+                </div>
+      
         @endif
                  
             </div>

@@ -75,11 +75,17 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route("blogs.index") }}" class="nav-link">
                     <i class="fas fa-image nav-icon"></i>
-                    <p>Change Profile Photo</p>
+                    <p>Blog</p>
                     </a>
                 </li>
+                {{-- <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="fas fa-image nav-icon"></i>
+                    <p>Blogs</p>
+                    </a>
+                </li> --}}
 
                 <li class="nav-item">
                     <a href="{{ route('userGetPassword') }}" class="nav-link">
@@ -98,6 +104,12 @@
                     <a href="{{ route("services.create") }}" class="nav-link">
                     <i class="fas fa-cogs nav-icon"></i>
                     <p>Services</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route("team.index") }}" class="nav-link">
+                    <i class="fas fa-users nav-icon"></i>
+                    <p>Teams Members</p>
                     </a>
                 </li>
 
