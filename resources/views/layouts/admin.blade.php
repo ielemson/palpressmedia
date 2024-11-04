@@ -99,6 +99,7 @@
         <div id="sidebar-overlay"></div>
     </div>
     <!-- ./wrapper -->
+    @yield("js_app")
     </body>
 
 </html>
