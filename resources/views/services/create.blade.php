@@ -36,7 +36,7 @@ Create Roles
     
                 <div class="form-group mb-3">
                     <label for="content" class="form-label">Content</label>
-                    <textarea name="content" id="content" class="form-control" rows="5" required>{{ old('content') }}</textarea>
+                    <textarea name="content" id="content" class="form-control" rows="5">{{ old('content') }}</textarea>
                 </div>
     
                 <div class="form-group mb-3">

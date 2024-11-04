@@ -29,7 +29,7 @@ Team Member
 
         <div class="form-group">
             <label for="about">About</label>
-            <textarea name="about" class="form-control" rows="4" required>{{ $teamMember->about }}</textarea>
+            <textarea name="about" class="form-control" rows="4">{{ $teamMember->about }}</textarea>
         </div>
 
         <div class="form-group">

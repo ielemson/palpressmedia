@@ -28,7 +28,7 @@ Team Member
 
         <div class="form-group">
             <label for="about">About</label>
-            <textarea name="about" class="form-control" rows="4" required>{{ old('about') }}</textarea>
+            <textarea name="about" class="form-control" rows="4">{{ old('about') }}</textarea>
         </div>
 
         <div class="form-group">

@@ -38,7 +38,7 @@
         
                 <div class="form-group">
                     <label for="content">Content</label>
-                    <textarea class="form-control" id="content" name="content" rows="5" required>{{ $blog->content }}</textarea>
+                    <textarea class="form-control" id="content" name="content" rows="5">{{ $blog->content }}</textarea>
                 </div>
         
                 <div class="form-group">
