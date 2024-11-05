@@ -107,6 +107,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route("portfolio.index") }}" class="nav-link">
+                    <i class="fas fa-cogs nav-icon"></i>
+                    <p>Portfolio</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route("team.index") }}" class="nav-link">
                     <i class="fas fa-users nav-icon"></i>
                     <p>Teams Members</p>

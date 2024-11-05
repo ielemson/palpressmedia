@@ -4,7 +4,7 @@ $setting = \App\Models\Setting::find(1);
 @endphp
 @section("content")
     @include("partials.page-header")
-    @include("partials.page-hero",["title"=>"Blog Details"])
+    @include("partials.page-hero",["title"=>$blog->title])
 
     <section class="blog-details pt-130 pb-130">
         <div class="container">
@@ -44,9 +44,9 @@ $setting = \App\Models\Setting::find(1);
                             <ul class="post-meta">
                                 <li><i class="fa-light fa-circle-user"></i>{{ $post->title }}</li>
                             </ul>
-                            <h3 class="title"><a href="{{ route("blog_details",$post->slug) }}">
+                            {{-- <h3 class="title"><a href="{{ route("blog_details",$post->slug) }}">
                                 {{ \Illuminate\Support\Str::limit($post->content, 50, '...') }}
-                            </a></h3>
+                            </a></h3> --}}
                         </div>
                     </div>
                       @endforeach

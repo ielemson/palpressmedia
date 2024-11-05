@@ -25,6 +25,8 @@ Route::get('/contact-us', [App\Http\Controllers\GeneralController::class, 'conta
 Route::get('/our-services', [App\Http\Controllers\GeneralController::class, 'services'])->name('services');
 Route::get('/our-services/{slug}', [App\Http\Controllers\GeneralController::class, 'ourservice'])->name('ourservice');
 Route::get('/our-blogs', [App\Http\Controllers\GeneralController::class, 'ourblogs'])->name('ourblogs');
+Route::get('/our-portfolios', [App\Http\Controllers\GeneralController::class, 'ourportfolios'])->name('ourportfolios');
+Route::get('/our-portfolio/{slug}', [App\Http\Controllers\GeneralController::class, 'ourportfolio'])->name('ourportfolio');
 Route::get('/blog/{slug}', [App\Http\Controllers\GeneralController::class, 'blog_details'])->name("blog_details");
 Route::post('contact', [App\Http\Controllers\GeneralController::class, 'contactSubmit'])->name("contact.submit");
 
@@ -55,6 +57,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('services', 'ServicesController');
     Route::resource('team', 'TeamMemberController');
     Route::resource('blogs', "BlogController");
+    Route::resource('portfolio', "PortfolioController");
+    // routes/web.php
+
+
 });
 
 

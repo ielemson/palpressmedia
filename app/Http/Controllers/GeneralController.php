@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Portfolio;
 use App\Models\Service;
 use App\Models\TeamMember;
 use Illuminate\Http\Request;
@@ -39,6 +40,15 @@ class GeneralController extends Controller
     public function ourblogs(){
         $blogs = Blog::where("status",1)->get();
         return view("blogs",compact("blogs"));
+    }
+
+    public function ourportfolios(){
+        $portfolios = Portfolio::where("status","published")->get();
+        return view("portfolios",compact("portfolios"));
+    }
+    public function ourportfolio($slug){
+        $portfolio = Portfolio::where("slug",$slug)->first();
+        return view("portfolio",compact("portfolio"));
     }
     public function blog_details($slug){
         $blog = Blog::where("slug",$slug)->first();
