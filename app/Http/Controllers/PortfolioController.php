@@ -27,6 +27,7 @@ class PortfolioController extends Controller
         // dd($request->all());
         $data = $request->validate([
             'title' => 'required|string|max:255',
+            'project_client' => 'required|string',
             'content' => 'required|string',
             'cover_picture' => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'gallery.*' => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',

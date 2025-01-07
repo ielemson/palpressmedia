@@ -2,6 +2,7 @@
 @php
 $setting = \App\Models\Setting::find(1);
 @endphp
+@section("title",$portfolio->title)
 @section("content")
     @include("partials.page-header")
     @include("partials.page-hero",["title"=>$portfolio->title])

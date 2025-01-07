@@ -2,9 +2,9 @@
 @php
 $setting = \App\Models\Setting::find(1);
 @endphp
+@section('title', 'Home')
 @section("content")
-    @include("partials.header")
-
+@include("partials.header")
 
 @include("partials.side-area")
 <!--/.sidebar-area-->

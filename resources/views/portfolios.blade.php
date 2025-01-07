@@ -1,5 +1,5 @@
 @extends("layouts.app")
-
+@section("title","Portfolio")
 @section("content")
     @include("partials.page-header")
     @include("partials.page-hero",["title"=>"Our Portfolio"])

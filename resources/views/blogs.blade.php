@@ -1,5 +1,6 @@
 @extends("layouts.app")
 
+@section('title', 'Our Blog')
 @section("content")
     @include("partials.page-header")
     @include("partials.page-hero",["title"=>"Our Blog"])
