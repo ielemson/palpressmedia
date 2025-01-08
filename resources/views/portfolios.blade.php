@@ -20,7 +20,7 @@
                             <img src="{{ asset('storage/' . $portfolio->cover_picture) }}" alt="project">
                         </div>
                         <div class="project-content">
-                            <span>{!! Str::limit($portfolio->content, 150, '...') !!}</span>
+                            <span>{!! Str::limit($portfolio->details, 150, '...') !!}</span>
                             {{-- {!! Illuminate\Support\Str::limit($latest->details, 200) !!} --}}
                             <h3 class="title"><a href="{{ route("ourportfolio",$portfolio->slug) }}">{!! $portfolio->title !!}</a></h3>
                         </div>
