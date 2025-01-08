@@ -44,9 +44,9 @@ $setting = \App\Models\Setting::find(1);
                 <h3>About Us</h3>
             </div>
             <p>
-                {{ $setting->about }}
+                {!! Illuminate\Support\Str::limit($setting->about, 156) !!}
             </p>
-            <a href="{{ route("contact") }}" class="bz-primary-btn">Contact Us</a>
+            <a href="{{ route("about") }}" class="bz-primary-btn">Read More</a>
         </div>
         <div class="side-menu-contact">
             <div class="side-menu-header">
