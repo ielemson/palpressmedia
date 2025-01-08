@@ -79,7 +79,7 @@ $setting = \App\Models\Setting::find(1);
                               
                             </li>
                             <li class="">
-                                <a href="{{ route("ourportfolios") }}">Portfolio</a>
+                                <a href="#portfolio">Portfolio</a>
                               
                             </li>
                             <li><a href="{{ route("contact") }}">Contact</a></li>

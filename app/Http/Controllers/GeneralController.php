@@ -15,7 +15,8 @@ class GeneralController extends Controller
         $teamMembers = TeamMember::all();
         $blogs = Blog::where("status",1)->get();
         $services = Service::all();
-        return view("welcome",compact("teamMembers","blogs","services"));
+        $portfolios = Portfolio::latest()->where('status',"published")->orderBy('id', 'DESC')->get();
+        return view("welcome",compact("teamMembers","blogs","services","portfolios"));
     }
     
     public function about(){
@@ -48,7 +49,8 @@ class GeneralController extends Controller
     }
     public function ourportfolio($slug){
         $portfolio = Portfolio::where("slug",$slug)->first();
-        return view("portfolio",compact("portfolio"));
+        $portfolios = Portfolio::latest()->where('status',"published")->orderBy('id', 'DESC')->paginate(4);
+        return view("portfolio",compact("portfolio","portfolios"));
     }
     public function blog_details($slug){
         $blog = Blog::where("slug",$slug)->first();

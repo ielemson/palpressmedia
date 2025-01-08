@@ -41,19 +41,19 @@ Edit Portfolio
                     <div class="col-md-3">
                         <div class="form-group mb-3">
                             <label for="title" class="form-label">Project Date</label>
-                            <input type="date" name="project_date" class="form-control" {{ $portfolio->project_date }}>
+                            <input type="date" name="project_date" class="form-control" value="{{ $portfolio->project_date }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group mb-3">
                             <label for="client" class="form-label">Project Client</label>
-                            <input type="text" name="project_client" class="form-control" required {{ $portfolio->project_client }}>
+                            <input type="text" name="project_client" class="form-control" required value="{{ $portfolio->project_client }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group mb-3">
                             <label for="category" class="form-label">Project Category</label>
-                            <input type="text" name="project_category" class="form-control" required {{ $portfolio->project_category }}>
+                            <input type="text" name="project_category" class="form-control" required value="{{ $portfolio->project_category }}">
                         </div>
                     </div>
                          <div class="col-md-12">
@@ -94,11 +94,11 @@ Edit Portfolio
 
 <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
 <script>
-  tinymce.init({
-    selector: 'textarea',
-    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
-  });
+//   tinymce.init({
+//     selector: 'textarea',
+//     plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+//     toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+//   });
 </script>
 
 @endsection

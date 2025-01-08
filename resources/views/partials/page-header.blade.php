@@ -37,6 +37,10 @@ $setting = \App\Models\Setting::find(1);
                                     <a href="{{ route("ourblogs") }}">Blog</a>
                                   
                                 </li>
+                                {{-- <li class="">
+                                    <a href="{{ route("ourportfolios")}}">Portfolio</a>
+                                  
+                                </li> --}}
                                 <li><a href="{{ route("contact") }}">Contact</a></li>
                             </ul>
                         </div>

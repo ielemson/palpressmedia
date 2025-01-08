@@ -26,6 +26,9 @@ $setting = \App\Models\Setting::find(1);
 @include("partials.service-section")
 @endif
 <!-- ./ service-section -->
+@if (count($portfolios)> 0)
+@include("partials.portfolio")
+@endif
 
 @if (count($teamMembers)>0)
 @include("partials.team-members")

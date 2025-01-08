@@ -4,7 +4,7 @@
 <div class="container">
  
     <h1>{{ $portfolio->title }}</h1>
-    <p>{{ $portfolio->content }}</p>
+    <p>{!! $portfolio->content  !!}</p>
 
     <!-- Cover Picture -->
     @if ($portfolio->cover_picture)
