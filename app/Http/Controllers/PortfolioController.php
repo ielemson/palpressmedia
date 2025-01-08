@@ -28,6 +28,7 @@ class PortfolioController extends Controller
         $data = $request->validate([
             'title' => 'required|string|max:255',
             'project_client' => 'required|string',
+            'project_category' => 'required',
             'content' => 'required|string',
             'cover_picture' => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'gallery.*' => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',
@@ -63,12 +64,13 @@ class PortfolioController extends Controller
             'title' => 'required|string|max:255',
             'content' => 'required|string',
             'project_client' => 'required|string',
-            'project_category' => 'required|string',
+            'project_category' => 'required',
             'cover_picture' => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'gallery.*' => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'status' => 'required|string',
             'project_date' => 'required|date',
         ]);
+        
         $data['slug'] = Str::slug($request->title);
         if ($request->hasFile('cover_picture')) {
             $data['cover_picture'] = $request->file('cover_picture')->store('cover_pictures', 'public');
