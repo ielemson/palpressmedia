@@ -12,7 +12,7 @@
                 <div class="col-lg-4 col-md-4">
                     <div class="project-item-2">
                         <div class="overlay"></div>
-                        <div class="shape"><img src="{{ asset("assets/img/shapes/project-inner-shape.png") }}" alt="shape"></div>
+                        <div class="shape"><img src="{{ asset("assets/img/shapes/project-inner-shape.png") }}" alt="{!! $portfolio->title !!}"></div>
                         <div class="project-btn">
                             <a class="venobox" href="{{ asset('storage/' . $portfolio->cover_picture) }}" data-gall="projects"><i class="fa-regular fa-magnifying-glass"></i></a>
                         </div>
