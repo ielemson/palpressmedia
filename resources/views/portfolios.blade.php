@@ -20,8 +20,8 @@
                             <img src="{{ asset('storage/' . $portfolio->cover_picture) }}" alt="project">
                         </div>
                         <div class="project-content">
-                            <span>{{ Str::limit($portfolio->content, 50, '...') }}</span>
-                            <h3 class="title"><a href="{{ route("ourportfolio",$portfolio->slug) }}">{{ $portfolio->title }}</a></h3>
+                            <span>{{ Str::limit($portfolio->content, 150, '...') }}</span>
+                            <h3 class="title"><a href="{{ route("ourportfolio",$portfolio->slug) }}">{!! $portfolio->title !!}</a></h3>
                         </div>
                     </div>
                 </div>
@@ -38,9 +38,7 @@
                  </div>
              </section> 
               @endif
-               
             </div>
-           
         </div>
     </section>
 @endsection
